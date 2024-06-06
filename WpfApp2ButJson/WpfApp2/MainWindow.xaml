@@ -1,0 +1,108 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="900">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Авто">
+                <Grid>
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="/2207_w023_n003_2767b_p1_2767.jpg" Opacity="0.2"/>
+                        </StackPanel.Background>
+                        <TextBlock Text="Добавить автомобиль" FontWeight="Bold" Margin="10"/>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <TextBlock Text="Гос номер:" Width="96" FontWeight="Bold"/>
+                            <TextBox x:Name="LicensePlateTextBox" Width="500" Background="White"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <TextBlock Text="Бренд:" Width="100" FontWeight="Bold"/>
+                            <TextBox x:Name="BrandTextBox" Width="500"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <TextBlock Text="Год выпуска:" Width="100" FontWeight="Bold"/>
+                            <TextBox x:Name="YearTextBox" Width="500"/>
+                        </StackPanel>
+                        <Button Content="Добавить авто" Width="100" Margin="10" x:Name="AddCarButton" Click="AddCarButton_Click" Background="#FF55ADFF" Foreground="White"/>
+                        <ListBox x:Name="CarsListBox" Margin="10" Background="#FF77B0FB"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Водители">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="440*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.ColumnSpan="3">
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="/2207_w023_n003_2767b_p1_2767.jpg" Opacity="0.2"/>
+                        </StackPanel.Background>
+                        <TextBlock Text="Добавить нового водителя" FontWeight="Bold" Margin="10"/>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <TextBlock Text="Номер сотрудника:" Width="114" FontWeight="Bold"/>
+                            <TextBox x:Name="EmployeeNumberTextBox" Width="343"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <TextBlock Text="ФИО:" Width="113" FontWeight="Bold"/>
+                            <TextBox x:Name="FullNameTextBox" Width="343"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <TextBlock Text="Категория прав:" Width="114" FontWeight="Bold"/>
+                            <TextBox x:Name="LicenseCategoryTextBox" Width="340"/>
+                        </StackPanel>
+                        <Button Content="Добавить водителя" Width="123" Margin="10" x:Name="AddDriverButton" Click="AddDriverButton_Click" Background="#FF55ADFF" Foreground="White"/>
+                        <ListBox x:Name="DriversListBox" Margin="10" Background="#FF77B0FB"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Маршруты">
+                <Grid>
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="/2207_w023_n003_2767b_p1_2767.jpg" Opacity="0.2"/>
+                        </StackPanel.Background>
+                        <TextBlock Text="Добавить новый маршрут" FontWeight="Bold" Margin="10"/>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <TextBlock Text="Дата выезда:" Width="111"/>
+                            <TextBox x:Name="DepartureDateTextBox" Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <TextBlock Text="ID авто:" Width="111"/>
+                            <TextBox x:Name="CarIdTextBox" Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <TextBlock Text="ID водителя :" Width="111"/>
+                            <TextBox x:Name="DriverIdTextBox" Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <TextBlock Text="Дата прибытия:" Width="111"/>
+                            <TextBox x:Name="ReturnDateTextBox" Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <TextBlock Text="Пункт назначения:" Width="111"/>
+                            <TextBox x:Name="DestinationTextBox" Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <TextBlock Text="Начальный пробег:" Width="111"/>
+                            <TextBox x:Name="InitialMileageTextBox" Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <TextBlock Text="Конечный пробег:" Width="112"/>
+                            <TextBox x:Name="FinalMileageTextBox" Width="200"/>
+                        </StackPanel>
+                        <Button Content="Добавить маршрут" Width="112" Margin="10" x:Name="AddTripButton" Click="AddTripButton_Click" Foreground="White" Background="#FF55ADFF"/>
+                        <ListBox x:Name="TripsListBox" Margin="10" Background="#FF77B0FB"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

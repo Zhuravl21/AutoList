@@ -1,0 +1,11 @@
+[
+  {
+    "DepartureDate": "2024-05-12T00:00:00",
+    "CarId": 1,
+    "DriverId": 1,
+    "ReturnDate": "2024-05-14T00:00:00",
+    "Destination": "Малиновка",
+    "InitialMileage": 45003,
+    "FinalMileage": 46394
+  }
+]
